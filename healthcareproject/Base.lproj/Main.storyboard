@@ -1,25 +1,705 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="OIy-K7-l6A">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="L2q-Pt-a8O">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <navigationController id="OIy-K7-l6A" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Qy-1M-BmP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Gjq-Dz-UmQ" kind="relationship" relationship="rootViewController" id="ivI-WP-Fss"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4hK-1i-0ub" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-634" y="-199"/>
+        </scene>
+        <!--search-->
+        <scene sceneID="PaE-bR-2Vm">
+            <objects>
+                <viewController title="search" id="JCh-HA-8DD" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eC7-bK-Mt2"/>
+                        <viewControllerLayoutGuide type="bottom" id="gde-wO-1cp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MoL-vD-oaa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search by Patient ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n8B-fh-sSm">
+                                <rect key="frame" x="26" y="151" width="247" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y98-m1-Mqp">
+                                <rect key="frame" x="26" y="254" width="360" height="30"/>
+                                <color key="backgroundColor" red="0.046716342855478196" green="0.20906047976293529" blue="0.33014079211229952" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Search by Patient ID"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filter by department" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wi4-Db-Gnf">
+                                <rect key="frame" x="26" y="311" width="274" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Audiology" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xa1-e2-Cd2">
+                                <rect key="frame" x="26" y="352" width="360" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="arK-Qn-lvT">
+                                <rect key="frame" x="26" y="418" width="360" height="30"/>
+                                <color key="backgroundColor" red="0.046716342860000003" green="0.2090604798" blue="0.33014079210000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Filter by department"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Patient ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B5C-3Q-4FS">
+                                <rect key="frame" x="26" y="192" width="360" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sP4-bz-mLd">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.17858590008103015" green="0.82712232620000004" blue="0.72772335815134359" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.59054564730000003" green="0.95994697120000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Search &amp; Filter" id="zDg-84-07S"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sP4-bz-mLd" firstAttribute="centerX" secondItem="MoL-vD-oaa" secondAttribute="centerX" id="fC9-Gh-Ozz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DWq-Qb-5YF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2tC-mp-XES" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="736.5333333333333" y="529.18666666666661"/>
+        </scene>
+        <!--delete-->
+        <scene sceneID="sfF-g7-iYl">
+            <objects>
+                <viewController title="delete" id="PVD-gm-hfS" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="alf-kl-6GL"/>
+                        <viewControllerLayoutGuide type="bottom" id="fRc-TX-i7m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="azD-e1-R4h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search Patient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pkz-8P-jcb">
+                                <rect key="frame" x="20" y="142" width="264" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QWT-w1-GXa">
+                                <rect key="frame" x="20" y="181" width="360" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iex-Oq-n0w">
+                                <rect key="frame" x="20" y="243" width="360" height="30"/>
+                                <color key="backgroundColor" red="0.046716342860000003" green="0.2090604798" blue="0.33014079210000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Search Patient">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Patient name1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQa-fw-eRa">
+                                <rect key="frame" x="151" y="331" width="99" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Department" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXO-wm-hP2">
+                                <rect key="frame" x="297" y="331" width="83" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Patient ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNt-BK-d6H">
+                                <rect key="frame" x="20" y="331" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewo-Nu-MeD">
+                                <rect key="frame" x="146" y="388" width="108" height="32"/>
+                                <color key="backgroundColor" red="0.046716342860000003" green="0.2090604798" blue="0.33014079210000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Delete patient">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5P-vp-fph">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <color key="backgroundColor" red="0.98269446284103423" green="0.960112700814862" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.59054564730000003" green="0.95994697120000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Delete Patient" id="RT7-O7-dBk"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="S5P-vp-fph" firstAttribute="centerX" secondItem="azD-e1-R4h" secondAttribute="centerX" id="b8w-p1-Oor"/>
+                            <constraint firstItem="S5P-vp-fph" firstAttribute="centerX" secondItem="azD-e1-R4h" secondAttribute="centerX" id="er7-1t-bL4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sKq-Tb-r8p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hPX-DO-sdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1384" y="632"/>
+        </scene>
+        <!--addtest-->
+        <scene sceneID="Pxm-jt-oi4">
+            <objects>
+                <viewController title="addtest" id="PLe-Ja-le3" customClass="addpatientcontroller" customModule="healthcareproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ala-6O-bSS"/>
+                        <viewControllerLayoutGuide type="bottom" id="P42-JT-gqC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qmc-Kw-xEg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8cx-tI-SEu">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <color key="barTintColor" red="0.59054564730000003" green="0.95994697120000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Add Test" id="lFR-kZ-70z"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Patient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ke-fe-uQT">
+                                <rect key="frame" x="20" y="118" width="327" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Patient Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nnm-Su-LXm">
+                                <rect key="frame" x="20" y="147" width="361" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blood Pressure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fy-zp-LHD">
+                                <rect key="frame" x="21" y="185" width="178" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Cholesterol" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QPp-0T-lgR">
+                                <rect key="frame" x="21" y="287" width="360" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="708-jd-Us3">
+                                <rect key="frame" x="21" y="325" width="168" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Temperature" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c3y-5z-nYd">
+                                <rect key="frame" x="21" y="354" width="360" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="09y-b3-qN5">
+                                <rect key="frame" x="21" y="392" width="231" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cholesterol" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJA-qU-wdU">
+                                <rect key="frame" x="20" y="252" width="222" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="p4d-BE-5Ug">
+                                <rect key="frame" x="22" y="421" width="360" height="144"/>
+                                <date key="date" timeIntervalSinceReferenceDate="501355974.48359299">
+                                    <!--2016-11-20 17:32:54 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter blood pressure" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J2Z-HD-cMS">
+                                <rect key="frame" x="21" y="214" width="361" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qk1-Ae-7Vx">
+                                <rect key="frame" x="21" y="579" width="361" height="30"/>
+                                <color key="backgroundColor" red="0.046716342860000003" green="0.2090604798" blue="0.33014079210000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add Test">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addpatient:" destination="PLe-Ja-le3" eventType="touchUpInside" id="bFt-id-ulo"/>
+                                    <segue destination="uzu-Fa-AYs" kind="push" id="Nxx-y7-aFB"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8cx-tI-SEu" firstAttribute="centerX" secondItem="Qmc-Kw-xEg" secondAttribute="centerX" id="ayc-1q-CD5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zqV-bX-jNw"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="txtblood" destination="J2Z-HD-cMS" id="ywj-Jb-YY2"/>
+                        <outlet property="txtcholes" destination="QPp-0T-lgR" id="aGr-ZF-jw7"/>
+                        <outlet property="txtdate" destination="p4d-BE-5Ug" id="vN9-tA-aTv"/>
+                        <outlet property="txtname" destination="nnm-Su-LXm" id="IK4-z3-ZTw"/>
+                        <outlet property="txttemp" destination="c3y-5z-nYd" id="yCi-Dr-gOm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsD-xJ-P7Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1686" y="-501"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="w5G-l7-4yO">
+            <objects>
+                <viewController id="uzu-Fa-AYs" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oUW-iG-9Kz"/>
+                        <viewControllerLayoutGuide type="bottom" id="eWV-oZ-du1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hpG-Md-Gre">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vLl-W8-PcG">
+                                <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" red="0.59054564730000003" green="0.95994697120000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem id="B0z-ZG-lfX"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Patient Data  Entered " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rae-f4-Gfx">
+                                <rect key="frame" x="20" y="357" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="tqF-pA-7BF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEF-NT-kOW">
+                                <rect key="frame" x="56" y="399" width="302" height="36"/>
+                                <color key="backgroundColor" red="0.076010679792045191" green="0.061437254985339147" blue="0.50445181564245811" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                <color key="tintColor" red="0.13909533508752828" green="0.11242677466407819" blue="0.92311888966480449" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Redirect To Home">
+                                    <color key="titleColor" red="0.99596281424581001" green="0.99596281424581001" blue="0.99596281424581001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Czi-Dp-5IQ" kind="push" id="yKB-Da-Q0x"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56470588235294117" green="0.95686274509803926" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="dEF-NT-kOW" firstAttribute="width" secondItem="Rae-f4-Gfx" secondAttribute="width" constant="94" id="3I2-rf-Qf1"/>
+                            <constraint firstItem="Rae-f4-Gfx" firstAttribute="top" secondItem="vLl-W8-PcG" secondAttribute="bottom" constant="72" id="B2Z-R0-4YU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dEF-NT-kOW" secondAttribute="trailing" constant="36" id="DXa-fK-oBU"/>
+                            <constraint firstItem="dEF-NT-kOW" firstAttribute="height" secondItem="Rae-f4-Gfx" secondAttribute="height" constant="9" id="eW1-ZX-cQL"/>
+                            <constraint firstItem="dEF-NT-kOW" firstAttribute="leading" secondItem="Rae-f4-Gfx" secondAttribute="trailing" constant="-327" id="gbv-T6-H42"/>
+                            <constraint firstItem="Rae-f4-Gfx" firstAttribute="centerX" secondItem="hpG-Md-Gre" secondAttribute="centerX" id="jwp-zA-uTT"/>
+                            <constraint firstItem="dEF-NT-kOW" firstAttribute="leading" secondItem="hpG-Md-Gre" secondAttribute="leadingMargin" constant="36" id="m0P-0f-hfn"/>
+                            <constraint firstItem="Rae-f4-Gfx" firstAttribute="centerY" secondItem="hpG-Md-Gre" secondAttribute="centerY" id="ssD-TU-4pD"/>
+                            <constraint firstItem="vLl-W8-PcG" firstAttribute="centerX" secondItem="Rae-f4-Gfx" secondAttribute="centerX" id="vLN-Kj-8P2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oFs-HS-btu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9T7-jA-y57" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="-693"/>
+        </scene>
+        <!--addpatient-->
+        <scene sceneID="uHT-K5-KTA">
+            <objects>
+                <viewController title="addpatient" id="xs0-3A-CKz" customClass="patientcontroler" customModule="healthcareproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8wO-yZ-NEn"/>
+                        <viewControllerLayoutGuide type="bottom" id="HBq-Ks-CbC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WLj-3R-Wzs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KvD-ex-GSp">
+                                <rect key="frame" x="20" y="147" width="378" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3G-yN-zH0">
+                                <rect key="frame" x="20" y="233" width="378" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Department" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Axs-ku-b6o">
+                                <rect key="frame" x="20" y="316" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H9m-IN-mof">
+                                <rect key="frame" x="20" y="184" width="367" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yPG-hX-quP">
+                                <rect key="frame" x="20" y="269" width="367" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Department" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wah-Y1-uNc">
+                                <rect key="frame" x="20" y="354" width="367" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dOW-ym-7fU">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <color key="barTintColor" red="0.59054564730000003" green="0.95994697120000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Add Patient" id="KnP-Kt-14M"/>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B8g-3Z-sTD">
+                                <rect key="frame" x="20" y="410" width="373" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ys0-Ko-wtf">
+                                <rect key="frame" x="20" y="448" width="367" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhD-Ma-L37">
+                                <rect key="frame" x="11" y="524" width="367" height="30"/>
+                                <color key="backgroundColor" red="0.046716342860000003" green="0.2090604798" blue="0.33014079210000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add Patient">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addrecordbtn:" destination="xs0-3A-CKz" eventType="touchUpInside" id="fRa-1s-kSz"/>
+                                    <segue destination="uzu-Fa-AYs" kind="push" id="yDi-Ph-85L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dOW-ym-7fU" firstAttribute="centerX" secondItem="WLj-3R-Wzs" secondAttribute="centerX" id="H4n-ze-uNf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZDQ-GQ-MNi"/>
+                    <connections>
+                        <outlet property="txtadress" destination="ys0-Ko-wtf" id="Orv-rg-JRT"/>
+                        <outlet property="txtage" destination="yPG-hX-quP" id="sh2-fz-Ga4"/>
+                        <outlet property="txtdepartment" destination="Wah-Y1-uNc" id="EKb-eP-LYy"/>
+                        <outlet property="txtname" destination="H9m-IN-mof" id="TNw-XM-gSB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRd-iT-GSg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="-644"/>
+        </scene>
+        <!--Patient List-->
+        <scene sceneID="yhx-Kc-pYO">
+            <objects>
+                <tableViewController id="Czi-Dp-5IQ" customClass="PatientTableViewController" customModule="healthcareproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="172" sectionHeaderHeight="28" sectionFooterHeight="28" id="EzQ-zL-Jbh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="separatorColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" hidden="YES" userInteractionEnabled="NO" contentMode="redraw" id="hNf-Bp-5YD">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Czi-Dp-5IQ" id="ijx-mc-yN3"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PatientTableViewCell" rowHeight="172" id="4Tv-jS-j10" customClass="PatientTableViewCell" customModule="healthcareproject" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="172"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4Tv-jS-j10" id="nj2-oG-JEp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="171"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N1m-8Q-HwT">
+                                            <rect key="frame" x="31" y="41" width="246" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="age Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llQ-5p-3bf">
+                                            <rect key="frame" x="223" y="41" width="246" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="address Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uE-5W-oTF">
+                                            <rect key="frame" x="31" y="119" width="246" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="department Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2K-gb-gxJ">
+                                            <rect key="frame" x="223" y="119" width="246" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Patient Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgl-Ej-ohO">
+                                            <rect key="frame" x="31" y="12" width="124" height="21"/>
+                                            <color key="backgroundColor" red="0.59052436078709791" green="0.99596281424581001" blue="0.73394270316172516" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="shadowColor" red="0.09075898677110672" green="0.062334395945072174" blue="0.023306041955947876" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ive-bC-Omf">
+                                            <rect key="frame" x="224" y="12" width="143" height="21"/>
+                                            <color key="backgroundColor" red="0.58253768825140373" green="0.99596281424581001" blue="0.73487045950556407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.10915357619524002" green="0.12699019908905029" blue="0.034846670925617218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rK-Rg-X0y">
+                                            <rect key="frame" x="31" y="90" width="124" height="21"/>
+                                            <color key="backgroundColor" red="0.59229550886249871" green="0.99596281424581001" blue="0.72073534073591095" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.054952271282672882" green="0.050052173435688019" blue="0.015556634403765202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Depatment:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2B-xz-VZE">
+                                            <rect key="frame" x="223" y="90" width="139" height="21"/>
+                                            <color key="backgroundColor" red="0.56889400259321499" green="0.99596281424581001" blue="0.76078910155787582" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <color key="shadowColor" red="0.051216810941696167" green="0.038573060184717178" blue="0.011650518514215946" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="--------------------------------------------------------------------" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvw-jA-x9G">
+                                            <rect key="frame" x="-47" y="138" width="584" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sts-xV-4fp">
+                                            <rect key="frame" x="314" y="117" width="65" height="26"/>
+                                            <color key="backgroundColor" red="0.62208491563796997" green="0.90573197603225708" blue="0.91795521974563599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <rect key="contentStretch" x="0.40000000000000002" y="0.0" width="1" height="1"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="tintColor" red="0.99198132753372192" green="0.99604541063308716" blue="0.99596863985061646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="Add Test">
+                                                <color key="titleColor" red="0.019688339903950691" green="0.015380531549453735" blue="0.003875672584399581" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleShadowColor" red="0.33095470070838928" green="0.91391390562057495" blue="0.30346554517745972" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="PLe-Ja-le3" kind="push" id="Ih9-Wg-KsI"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.92952417305652424" green="0.8537760254341018" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="addresslabel" destination="2uE-5W-oTF" id="1fz-T1-NUa"/>
+                                    <outlet property="agelabel" destination="llQ-5p-3bf" id="lcw-kQ-itr"/>
+                                    <outlet property="departmentlabel" destination="l2K-gb-gxJ" id="Cgh-rf-AAr"/>
+                                    <outlet property="nameLabel" destination="N1m-8Q-HwT" id="gGG-mC-eas"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Czi-Dp-5IQ" id="sWb-y7-DPz"/>
+                            <outlet property="delegate" destination="Czi-Dp-5IQ" id="5AP-rZ-6KL"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Patient List" id="0CQ-Cb-zSf">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="jRp-oF-vtr">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="xs0-3A-CKz" kind="push" id="F10-aM-oZg"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="trash" id="Fav-y9-mz4">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="PVD-gm-hfS" kind="push" id="FHG-5C-VJE"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="search" id="DZY-vH-X7M">
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <segue destination="PVD-gm-hfS" kind="push" id="MGP-9Y-AbS"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="fpg-j1-6Rn">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
+                    <connections>
+                        <outlet property="as" destination="hNf-Bp-5YD" id="mWB-eQ-8rs"/>
+                        <outlet property="searchDisplayController" destination="MdY-Ss-FfU" id="JMM-OA-pEV"/>
+                        <outlet property="view" destination="EzQ-zL-Jbh" id="Srl-Bo-5Mo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1eB-ck-dm1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="MdY-Ss-FfU">
+                    <connections>
+                        <outlet property="delegate" destination="Czi-Dp-5IQ" id="l7S-TO-vsp"/>
+                        <outlet property="searchContentsController" destination="Czi-Dp-5IQ" id="4Kv-Ho-Iof"/>
+                        <outlet property="searchResultsDataSource" destination="Czi-Dp-5IQ" id="6RC-37-tzY"/>
+                        <outlet property="searchResultsDelegate" destination="Czi-Dp-5IQ" id="gPV-35-Inx"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="393" y="-655"/>
+        </scene>
+        <!--Login Controller-->
+        <scene sceneID="Vko-RR-y1W">
+            <objects>
+                <viewController id="Gjq-Dz-UmQ" customClass="LoginController" customModule="healthcareproject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6H0-eQ-1Vp"/>
+                        <viewControllerLayoutGuide type="bottom" id="cVG-jy-wqP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mv4-fO-r4k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yS1-SE-YDb">
+                                <rect key="frame" x="13" y="284" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3u-pw-gfR">
+                                <rect key="frame" x="132" y="360" width="107" height="30"/>
+                                <color key="backgroundColor" red="0.1063686812" green="0.31374975469999999" blue="0.39047955449999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccountAction:" destination="Gjq-Dz-UmQ" eventType="touchUpInside" id="osS-qR-VSi"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UeV-Y3-3Qk">
+                                <rect key="frame" x="13" y="322" width="343" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23Q-Px-cM7">
+                                <rect key="frame" x="0.0" y="393" width="370" height="36"/>
+                                <color key="backgroundColor" red="0.1063686812" green="0.31374975469999999" blue="0.39047955449999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="LJQ-B3-3nc"/>
+                                </constraints>
+                                <size key="titleShadowOffset" width="2" height="0.0"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="Gjq-Dz-UmQ" eventType="touchUpInside" id="hNV-iR-YfP"/>
+                                    <segue destination="Czi-Dp-5IQ" kind="push" identifier="loginsegue" id="Swf-8i-AAS"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDB-Bm-ekK">
+                                <rect key="frame" x="1" y="64" width="388" height="44"/>
+                                <color key="backgroundColor" red="0.1977090909" green="0.82712232620000004" blue="0.69404714779999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.62208491563796997" green="0.90573197603225708" blue="0.91795521974563599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.59054564730000003" green="0.95994697120000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Login" id="gmE-Dl-H0T"/>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="medical-clinic-logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="1a8-8R-ELJ">
+                                <rect key="frame" x="116" y="128" width="153" height="117"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Healthcare" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uam-jH-eWS">
+                                <rect key="frame" x="147" y="253" width="91" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="G9F-gM-xi5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UeV-Y3-3Qk" firstAttribute="top" secondItem="yS1-SE-YDb" secondAttribute="bottom" constant="8" symbolic="YES" id="1Zl-dp-afB"/>
+                            <constraint firstItem="UeV-Y3-3Qk" firstAttribute="top" secondItem="yS1-SE-YDb" secondAttribute="bottom" constant="8" id="5gC-BD-de1"/>
+                            <constraint firstItem="UeV-Y3-3Qk" firstAttribute="leading" secondItem="mv4-fO-r4k" secondAttribute="leadingMargin" constant="-4" id="A1H-ao-qAd"/>
+                            <constraint firstItem="23Q-Px-cM7" firstAttribute="top" secondItem="j3u-pw-gfR" secondAttribute="bottom" constant="3" id="ASy-wg-bbQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="yS1-SE-YDb" secondAttribute="trailing" constant="-4" id="FR7-Lu-0bf"/>
+                            <constraint firstItem="1a8-8R-ELJ" firstAttribute="top" secondItem="bDB-Bm-ekK" secondAttribute="bottom" constant="8" id="Pt6-IY-Ku4"/>
+                            <constraint firstItem="yS1-SE-YDb" firstAttribute="centerY" secondItem="mv4-fO-r4k" secondAttribute="centerY" constant="-35.5" id="V4g-Ve-D6s"/>
+                            <constraint firstItem="yS1-SE-YDb" firstAttribute="top" secondItem="uam-jH-eWS" secondAttribute="bottom" constant="22" id="YAP-RG-kud"/>
+                            <constraint firstItem="23Q-Px-cM7" firstAttribute="centerY" secondItem="mv4-fO-r4k" secondAttribute="centerY" constant="77.5" id="YMa-b7-W4J"/>
+                            <constraint firstItem="23Q-Px-cM7" firstAttribute="top" secondItem="UeV-Y3-3Qk" secondAttribute="bottom" constant="41" id="cva-rw-SdF"/>
+                            <constraint firstItem="yS1-SE-YDb" firstAttribute="leading" secondItem="UeV-Y3-3Qk" secondAttribute="leading" id="gmm-si-nDm"/>
+                            <constraint firstItem="j3u-pw-gfR" firstAttribute="centerX" secondItem="23Q-Px-cM7" secondAttribute="centerX" constant="-2" id="i7n-UX-PtV"/>
+                            <constraint firstItem="j3u-pw-gfR" firstAttribute="top" secondItem="UeV-Y3-3Qk" secondAttribute="bottom" constant="8" symbolic="YES" id="kw3-mz-Vj1"/>
+                            <constraint firstItem="yS1-SE-YDb" firstAttribute="trailing" secondItem="UeV-Y3-3Qk" secondAttribute="trailing" id="mAP-0J-rpU"/>
+                            <constraint firstItem="uam-jH-eWS" firstAttribute="top" secondItem="bDB-Bm-ekK" secondAttribute="bottom" constant="132" id="vsn-Xs-8t1"/>
+                            <constraint firstItem="UeV-Y3-3Qk" firstAttribute="centerX" secondItem="j3u-pw-gfR" secondAttribute="centerX" constant="-1" id="zPC-5n-LYE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="tkO-ix-wy5"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="emailField" destination="yS1-SE-YDb" id="2lN-GX-Mr7"/>
+                        <outlet property="passwordField" destination="UeV-Y3-3Qk" id="p3d-Ux-iTX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jcz-hk-fiw" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-15.5" y="151.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="medical-clinic-logo-1" width="450" height="450"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yKB-Da-Q0x"/>
+        <segue reference="yDi-Ph-85L"/>
+        <segue reference="MGP-9Y-AbS"/>
+    </inferredMetricsTieBreakers>
+    <color key="tintColor" red="0.62208491563796997" green="0.90573197603225708" blue="0.91795521974563599" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
